@@ -5,7 +5,7 @@ export default class Foot extends Component {
     return (
       <div className="App-footer">
         <p className="citation">
-          Les meilleures affaires, votre meilleure brocante en ligne...
+          Votre coin, pour les bons affaires...
         </p>
       </div>
     );

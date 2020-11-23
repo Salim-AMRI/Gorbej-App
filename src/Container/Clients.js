@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import Product from '../Components/product'
+import Client from '../Components/Client'
 import Foot from '../Components/foot';
 
-export class Carte extends Component {
+export class Clients extends Component {
     render() {
         return (
             <div>
-                <Product />
+                <Client />
                 <Foot/>
             </div>
         )
     }
 }
 
-export default Carte
+export default Clients

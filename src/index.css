@@ -1,13 +1,111 @@
+html {
+  height: 100%;
+}
+
 body {
+  min-height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin-bottom: 5%;
+  padding: 0;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.vente {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.vente img {
+  max-width: 21rem;
+  max-height: 31rem;
+}
+
+.achat {
+  max-width: 21rem;
+}
+
+.cover-img {
+  background-image: url(https://www.bvpronet.be/wp-content/uploads/2017/09/vide-maison.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.cover-img div {
+  font-size: xx-large;
+  font-weight: bold;
+  padding-top: 2%;
+  padding-left: 45%;
+}
+
+.cover-img div:hover {
+  color: rgb(160, 138, 14);
+}
+
+.re-size {
+  padding: 1%;
+  font-weight: bold;
+  margin-top: 1%;
+  margin-bottom: 3%;
+}
+
+/* CSS filter */
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 1rem;
+  border-bottom: 0.1rem #c0c0c0 solid;
+}
+
+.filter div {
+  flex: 1;
+}
+
+.T-T{
+  margin: 4%;
+}
+
+.table{
+  border: rgb(88, 86, 86) solid !important;
+}
+
+/* Modal CSS */
+
+.produit-description {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-height: 96vh;
+}
+
+.produit-description img {
+  width: 24rem;
+  height: 24rem;
+}
+
+.titre-modal{
+  font-size: x-large;
+  font-weight: bolder;
+  color: blue;
+}
+
+.produit-description-detail {
+  flex: 1 1;
+  margin: 1rem;
+  margin-left: 2rem;
+}
+
+.close-modal {
+  position: absolute;
+  right: 1rem;
+  top: 2rem;
+  z-index: 1000;
+  width: 4rem;
 }

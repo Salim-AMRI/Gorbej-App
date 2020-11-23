@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import SingIn from "../SingIn";
-import Foot from "../foot";
+import SingIn from "../Components/SingIn";
+import Foot from "../Components/foot";
 
 export class Connexion extends Component {
     render() {

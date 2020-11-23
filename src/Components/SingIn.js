@@ -5,7 +5,10 @@ import { Link } from "react-router-dom";
 
 const SingIn = ({ addPerson }) => {
   const [userName, setUserName] = useState("");
+  const [userTel, setUserTel] = useState("");
   const [userMail, setUserMail] = useState("");
+  const [userCIN, setUserCIN] = useState("");
+  const [userAdress, setUserAdress] = useState("");
   const [userPass, setUserPass] = useState("");
   const [userRole, setUserRole] = useState("Client");
 
@@ -19,13 +22,24 @@ const SingIn = ({ addPerson }) => {
         </Link>
 
         <form>
+          
           <span>Nom d'utilisateur</span>
           <input
             type="text"
-            placeholder="Entrer le nom d'utilisateur"
+            placeholder="Entrer votre nom et prénom"
             required
             value={userName}
             onChange={(e) => setUserName(e.target.value)}
+          />
+          <span>Téléphone</span>
+          <input
+            type="tel"
+            placeholder="Entrer le numero de tel "
+            minLength="8"
+            maxLength="13"
+            required
+            value={userTel}
+            onChange={(e) => setUserTel(e.target.value)}
           />
           <span>Mail</span>
           <input
@@ -34,6 +48,24 @@ const SingIn = ({ addPerson }) => {
             required
             value={userMail}
             onChange={(e) => setUserMail(e.target.value)}
+          />
+          <span>Adress</span>
+          <input
+            type="text"
+            placeholder="Ville, Pays "
+            required
+            value={userAdress}
+            onChange={(e) => setUserAdress(e.target.value)}
+          />
+          <span>N° CIN</span>
+          <input
+            type="number"
+            placeholder="Entrer le N° de CIN "
+            minLength="8"
+            maxLength="8"
+            required
+            value={userCIN}
+            onChange={(e) => setUserCIN(e.target.value)}
           />
           <span>Mot de passe</span>
           <input
@@ -51,14 +83,17 @@ const SingIn = ({ addPerson }) => {
             value={userRole}
             onChange={(e) => setUserRole("Administrateur")}
           />
-          <Link to ="/carte" className="margin">
+          <Link to="/carte"  className="margin">
             <button
               onClick={() =>
                 addPerson({
                   name: userName,
+                  cin: userCIN,
+                  adress: userAdress,
+                  tel: userTel,
                   mail: userMail,
                   pass: userPass,
-                  role: userRole,
+                  role: userRole
                 })
               }
             >

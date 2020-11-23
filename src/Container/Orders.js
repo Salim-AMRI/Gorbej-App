@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import Order from "../Components/panier";
-import Foot from "../Components/foot";
+import Order from '../Components/Order'
+import Foot from '../Components/foot'
 
-export class Commande extends Component {
+export default class Orders extends Component {
     render() {
         return (
             <div>
@@ -12,5 +12,3 @@ export class Commande extends Component {
         )
     }
 }
-
-export default Commande

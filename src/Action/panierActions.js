@@ -1,9 +1,7 @@
 import Axios from "axios";
 import {
   GET_ALL_PANIER,
-  DELETE_FOODS,
-  ADD_PANIER,
-  UPDATE_PANIER,
+  DELETE_PANIER,
 } from "./types";
 
 /* afficher le panier */
@@ -20,7 +18,7 @@ export function getPanierFromApi() {
     );
 }
 
-/* ajouter au panier */
+/* ajouter au panier 
 
 export const addPanier = (payload) => ({
   type: ADD_PANIER,
@@ -39,7 +37,7 @@ export function postPanier(el) {
     })
       .then((res) => dispatch(addPanier(el)))
       .catch((err) => console.log(err));
-}
+} 
 
 // edit food
 
@@ -57,8 +55,8 @@ export function updatePanierFromAPI(el) {
 
 /* delete food */
 
-export const deleteFoods = (payload) => ({
-  type: DELETE_FOODS,
+export const deletePanier = (payload) => ({
+  type: DELETE_PANIER,
   payload,
 });
 

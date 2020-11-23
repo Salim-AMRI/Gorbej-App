@@ -1,11 +1,11 @@
 import { combineReducers } from "redux";
-import foodReducer from "./FoodReducer";
+import productReducer from "./productReducer";
 import userReducer from "./SingReducer";
 import panierReducer from "./PanierReducer";
 import roleReducer from './roleReducer';
 
 const allReducers = combineReducers({
-  foods: foodReducer,
+  produits: productReducer,
   panier: panierReducer,
   user: userReducer,
   role: roleReducer,

@@ -5,12 +5,11 @@ const initialState = {
 };
 
 export default function userReducer(state = initialState, action) {
+  if (action.type === GET_ALL_USER) {
+    return action.payload;
+  }
   if (action.type === ADD_USER)
     return { ...state, user: { ...action.payload, ...state.user } };
-
-  {
-    if (action.type === GET_ALL_USER) return action.payload;
-  }
 
   return state;
 }

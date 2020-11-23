@@ -5,13 +5,16 @@ import { GetUsersFromApi } from "../Action/userActions";
 
 class SignUp extends Component {
   verif() {
-    console.log(this.state)
-    const x = this.props.user.filter((el) => el.name === this.state.name && el.pass=== this.state.pass);
+    console.log(this.state);
+    const x = this.props.user.filter(
+      (el) => el.cin === this.state.cin && el.pass === this.state.pass
+    );
 
-    if (x.length === 0) 
-    {alert("Données invalides")}
-    else
-    {window.location.pathname = "/home";}
+    if (x.length === 0) {
+      alert("Données invalides");
+    } else {
+      window.location.pathname = "/home";
+    }
   }
   componentDidMount() {
     this.props.getAlluser();
@@ -27,12 +30,12 @@ class SignUp extends Component {
               <button className="btn"> Inscription</button>
             </Link>{" "}
             <div>
-              <span>Nom d'utilisateur</span>
+              <span>N° CIN</span>
               <input
-                type="text"
-                placeholder="Entrer le nom d'utilisateur"
+                type="number"
+                placeholder="Entrer le N° de CIN "
                 required
-                onChange={(e) => this.setState({ name: e.target.value })}
+                onChange={(e) => this.setState({ cin: e.target.value })}
               />
               <span>Mot de passe</span>
               <input

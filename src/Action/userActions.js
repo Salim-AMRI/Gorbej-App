@@ -13,8 +13,12 @@ export function postUser(el) {
     Axios.post(`http://localhost:3000/user`, {
       id: el.id,
       name: el.name,
+      cin: el.cin,
+      adress: el.adress,
+      tel: el.tel,
       mail: el.mail,
       pass: el.pass,
+      role: el.role,
     })
       .then((res) => dispatch(addUser(el)))
       .catch((err) => console.log(err));
@@ -24,13 +28,14 @@ export function postUser(el) {
 
 export const getAlluser = (payload) => ({
   type: GET_ALL_USER,
-  payload,
+  payload: payload,
 });
 
 export function GetUsersFromApi() {
   return (dispatch) =>
-    Axios.get("http://localhost:3000/user").then((res) => {
-      dispatch(getAlluser(res.data));
-      console.log(res.data);
-    });
+    Axios.get("http://localhost:3000/user").then((res) => 
+    {console.log("slt", res.data); 
+      dispatch(getAlluser(res.data))
+    }
+    );
 }

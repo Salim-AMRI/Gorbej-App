@@ -2,13 +2,15 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter, Route } from "react-router-dom";
 import Nav from "./Components/Nav/Nav";
-import Carte from "./Components/Nav/Carte";
-import Deshbord from "./Container/Admin";
-import Connexion from "./Components/Nav/Connexion";
-import Vendre from "./Components/Nav/Vendeur";
-import Deconnexion from "./Components/Nav/Decnx";
-import Auto from "./Components/Auten";
-import Commande from "./Components/Nav/Commande";
+import Carte from "./Container/Carte";
+import Commande from "./Container/Commande";
+import Connexion from "./Container/Connexion";
+import Deconnexion from "./Container/Decnx";
+import Auto from "./Container/Auten";
+import Accueil from "./Container/Accueil";
+import Orders from "./Container/Orders";
+import Clients from "./Container/Clients";
+import Admin from "./Container/Admin";
 
 //json-server --watch db.json
 
@@ -18,12 +20,16 @@ function App() {
       <div className="App">
         <Nav />
 
-        <Route exact path="/" component={Connexion} />
-        <Route exact path="/client" component={Deshbord} />
-        <Route exact path="/vendeur" component={Vendre} />
+        <Route exact path="/admin" component={Admin} />
+        <Route exact path="/client" component={Clients} />
+
+        <Route exact path="/" component={Accueil} />
+        <Route exact path="/cnx" component={Connexion} />
+        
         <Route exact path="/home" component={Carte} />
         <Route exact path="/panier" component={Commande} />
         <Route exact path="/signup" component={Deconnexion} />
+
         <Route path="/auto">
           <Auto />
         </Route>
@@ -32,6 +38,9 @@ function App() {
         </Route>
         <Route path="/carte">
           <Carte />
+        </Route>
+        <Route path="/enCours">
+          <Orders />
         </Route>
       </div>
     </BrowserRouter>

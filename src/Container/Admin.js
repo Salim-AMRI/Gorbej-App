@@ -1,16 +1,14 @@
-import React, { Component } from 'react';
-import Clients from "../Clients";
-import Foot from "../foot";
+import React, { Component } from 'react'
+import Dashboard from '../Components/Dashboard'
+import Foot from '../Components/foot'
 
-export class Deshbord extends Component {
+export default class Admin extends Component {
     render() {
         return (
             <div>
-                <Clients />
+                <Dashboard />
                 <Foot />
             </div>
         )
     }
 }
-
-export default Deshbord

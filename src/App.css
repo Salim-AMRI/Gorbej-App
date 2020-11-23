@@ -21,9 +21,15 @@
 }
 
 .Lo {
-  padding-right: 50%;
-  padding-left: 10%;
-  width: 7.5%;
+  padding-right: 4%;
+  padding-left: 5%;
+  width: 10%;
+  color: white;
+  font-size: xxx-large;
+}
+
+.client-link{
+  padding-right: 80%;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -45,7 +51,7 @@ a {
 }
 
 a:hover {
-  color: yellow;
+  color: rgb(0, 195, 255);
 }
 
 @media only screen and (max-width: 1100px) {
@@ -57,15 +63,18 @@ a:hover {
 .App-footer {
   background-color: #282c34;
   height: 70px;
+  width: 100%;
   align-items: center;
   justify-content: center;
   color: white;
+  bottom: 0;
+	position: fixed;
 }
 
 .citation {
-  padding-top: 2%;
   font-style: italic;
   font-size: larger;
+  margin-top: 2%;
 }
 
 h1 {
@@ -85,23 +94,24 @@ h1 {
   box-shadow: 6px 6px 12px #221313;
   margin: 2%;
   padding: 1%;
-  width: 300px;
+  width: 250px;
   text-transform: uppercase;
 }
 
 .menu {
-  width: 200px;
-  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  border-radius: 5%;
   transition: all 0.8s;
 }
 
 .menu:hover {
-  width: 250px;
+  width: 220px;
 }
 
 button {
   font-size: medium;
-  background-color: yellow;
+  background-color: rgb(0, 195, 255);
   font-family: fantasy;
   border: #251a1a5e solid;
   border-radius: 7px;
@@ -112,16 +122,15 @@ button {
 }
 
 button:hover {
-  background-color: rgb(117, 117, 45);
+  background-color: rgb(23, 128, 160);
   color: aliceblue;
 }
 
 .Sin {
-  background-image: url(https://ad962edbae8ba7b03b7f-d10007df79b5b7a4e475a291e50a08cf.ssl.cf3.rackcdn.com/ouvrir-une-brocante/ouvrir-une-brocante.jpg);
+  background-image: url(https://i2.wp.com/sacreesblogueuses.com/wp-content/uploads/2018/10/Sacrees-blogueuses-vide-dressing-septembre-2018-1.jpg?fit=1024%2C684&ssl=1);
   background-position: center;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  margin-top: 20px;
+  padding: 5.5%;
+  background-size: cover;
 }
 
 .Siin {
@@ -151,7 +160,7 @@ button:hover {
 }
 
 .Siin button {
-  background-color: #ebc20b;
+  background-color: rgb(0, 195, 255);
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: medium;
   color: rgb(19, 17, 17);
@@ -162,9 +171,8 @@ button:hover {
   width: 100%;
 }
 .Siin button:hover {
-  background-color: white;
-  color: hsl(0, 0%, 0%);
-  border: 1px solid hsl(44, 46%, 32%);
+  background-color: rgb(18, 101, 126);
+  color: white;
 }
 
 .Siin button.btn {
@@ -188,5 +196,3 @@ button:hover {
 .qte {
   cursor: pointer;
 }
-
-

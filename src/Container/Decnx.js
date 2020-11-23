@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Deconnexion from "../Deconnexion";
-import Foot from "../foot";
+import Deconnexion from "../Components/Deconnexion";
+import Foot from "../Components/foot";
 
 export class Connexion extends Component {
     render() {
