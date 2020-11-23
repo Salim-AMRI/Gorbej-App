@@ -1,0 +1,192 @@
+.App {
+  text-align: center;
+  font-family: fantasy;
+}
+
+.Nav {
+  display: flex;
+  background-color: #282c34;
+  height: 70px;
+  padding-top: 1%;
+  padding-bottom: 0.5%;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1100px) {
+  .Nav {
+    flex-direction: column;
+    padding-bottom: 3%;
+    padding-top: 0;
+  }
+}
+
+.Lo {
+  padding-right: 50%;
+  padding-left: 10%;
+  width: 7.5%;
+}
+
+@media only screen and (max-width: 1100px) {
+  .Lo {
+    padding-right: 0;
+    padding-left: 0;
+    width: 7%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+a {
+  list-style: none;
+  padding-left: 19px;
+  color: white;
+  text-decoration: none;
+  margin-top: 10%;
+}
+
+a:hover {
+  color: yellow;
+}
+
+@media only screen and (max-width: 1100px) {
+  a {
+    padding-left: 19px;
+  }
+}
+
+.App-footer {
+  background-color: #282c34;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.citation {
+  padding-top: 2%;
+  font-style: italic;
+  font-size: larger;
+}
+
+h1 {
+  font-size: 300%;
+  text-transform: uppercase;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.carte {
+  border-bottom: #000000 solid 3px;
+  border-radius: 25px 25px 25px 25px;
+  box-shadow: 6px 6px 12px #221313;
+  margin: 2%;
+  padding: 1%;
+  width: 300px;
+  text-transform: uppercase;
+}
+
+.menu {
+  width: 200px;
+  border-radius: 50%;
+  transition: all 0.8s;
+}
+
+.menu:hover {
+  width: 250px;
+}
+
+button {
+  font-size: medium;
+  background-color: yellow;
+  font-family: fantasy;
+  border: #251a1a5e solid;
+  border-radius: 7px;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 6px 6px 12px #221313;
+  margin-bottom: 5px;
+}
+
+button:hover {
+  background-color: rgb(117, 117, 45);
+  color: aliceblue;
+}
+
+.Sin {
+  background-image: url(https://ad962edbae8ba7b03b7f-d10007df79b5b7a4e475a291e50a08cf.ssl.cf3.rackcdn.com/ouvrir-une-brocante/ouvrir-une-brocante.jpg);
+  background-position: center;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-top: 20px;
+}
+
+.Siin {
+  width: 420px;
+  margin: 0 auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding: 2%;
+  border: 1px solid #f1f1f1;
+  background: #fff;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.Siin input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-family: fantasy;
+}
+
+.margin {
+  margin: 0px;
+  padding: 0px;
+}
+
+.Siin button {
+  background-color: #ebc20b;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: medium;
+  color: rgb(19, 17, 17);
+  padding: 14px 20px;
+  margin: 4% 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.Siin button:hover {
+  background-color: white;
+  color: hsl(0, 0%, 0%);
+  border: 1px solid hsl(44, 46%, 32%);
+}
+
+.Siin button.btn {
+  background-color: white;
+  font-size: large;
+  color: rgb(19, 17, 17);
+  margin-bottom: 10%;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  border-radius: 0%;
+}
+
+.Siin button.btn:hover,
+.Siin button.btn:focus {
+  background-color: rgb(145, 136, 136);
+  color: hsl(0, 0%, 100%);
+  border: none;
+}
+
+.qte {
+  cursor: pointer;
+}
+
+

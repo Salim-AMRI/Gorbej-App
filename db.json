@@ -1,0 +1,125 @@
+{
+  "foods": [
+    {
+      "id": "1",
+      "name": "PETITE FAIM",
+      "compo": "PITAS TOASTÉES, LA PLANCHE DE PITAS, SOUPE OU GASPACHO DU MOMENT, Mozzarella Di Buffala",
+      "photo": "https://www.leparadisdufruit.fr/wp-content/uploads/2020/05/carte-Pita-che%CC%80vre-noix.jpg",
+      "prix": "23.000"
+    },
+    {
+      "id": "2",
+      "name": "LA VIE EST BELLE EN SALADE",
+      "compo": "VITAMINÉ DÉTOX, CAESAR AU PARADIS, BURRATA D’ENFER, MAMA CHEF SALADE",
+      "photo": "https://www.leparadisdufruit.fr/wp-content/uploads/2020/05/carte-Mama-salade-crevettes.jpg",
+      "prix": "27.000"
+    },
+    {
+      "id": "3",
+      "name": "SUPER BOWL ÉNERGIE",
+      "compo": "VITAMINÉ DÉTOX, Sashimi de saumon frais, Falafel de courgette, DELUXE Mer Rouge",
+      "photo": "https://www.leparadisdufruit.fr/wp-content/uploads/2020/05/carte-Super-bowl-falafel.jpg",
+      "prix": "26.500"
+    },
+    {
+      "id": "4",
+      "name": "TOAST Y TOAST A !",
+      "compo": "GOODY WOODY, BANQUISE SAUVAGE, BROOKLYN AVENUE, MAMA CHICKEN CARRY, BANQUISE SAUVAGE",
+      "photo": "https://www.leparadisdufruit.fr/wp-content/uploads/2020/05/carte-Goody-woody.jpg",
+      "prix": "31.000"
+    },
+    {
+      "id": "5",
+      "name": "STREET PARADIS",
+      "compo": "FALAFEL EN FÊTE, FISH & CHIPS, BURGGIE’S ® Comme un burger, VEGAN BURGER",
+      "photo": "https://www.leparadisdufruit.fr/wp-content/uploads/2020/05/carte-Fish-_-chips.jpg",
+      "prix": "28.000"
+    },
+    {
+      "id": "6",
+      "name": "l'enfant du PARADIS",
+      "compo": "Plateau géant de nos meilleures saveurs, PINA COLADA",
+      "photo": "https://www.leparadisdufruit.fr/wp-content/uploads/2020/06/carte-pdf_112019_Sebastien_16.jpg",
+      "prix": "10.000"
+    },
+    {
+      "id": "7",
+      "name": "MOJITOS",
+      "compo": "MOJITO FRUIT",
+      "photo": "https://www.leparadisdufruit.fr/wp-content/uploads/2020/05/carte-item-01.jpg",
+      "prix": "5.500"
+    },
+    {
+      "id": "8",
+      "name": "COCKTAILS",
+      "compo": "fraise, coco, mangue ou passion framboise",
+      "photo": "https://www.leparadisdufruit.fr/wp-content/uploads/2020/06/carte-PDF_09092019-_20.jpg",
+      "prix": "4.000"
+    },
+    {
+      "id": "9",
+      "name": "PLAISIRS PARADIS",
+      "compo": "Prosecco Martini, ananas, citron vert, litchi, fruit de la passion",
+      "photo": "https://www.leparadisdufruit.fr/wp-content/uploads/2020/06/carte-PDF_09092019-_8.jpg",
+      "prix": "6.000"
+    }
+  ],
+  "panier": [
+    {
+      "photo": "https://www.leparadisdufruit.fr/wp-content/uploads/2020/05/carte-item-01.jpg",
+      "name": "MOJITOS",
+      "compo": "MOJITO FRUIT",
+      "qtite": 1,
+      "prix": "5.500",
+      "id": 2
+    },
+    {
+      "photo": "https://www.leparadisdufruit.fr/wp-content/uploads/2020/05/carte-Fish-_-chips.jpg",
+      "name": "STREET PARADIS",
+      "compo": "FALAFEL EN FÊTE, FISH & CHIPS, BURGGIE’S ® Comme un burger, VEGAN BURGER",
+      "qtite": 1,
+      "prix": "28.000",
+      "id": 3
+    },
+    {
+      "photo": "https://www.leparadisdufruit.fr/wp-content/uploads/2020/05/carte-Mama-salade-crevettes.jpg",
+      "name": "LA VIE EST BELLE EN SALADE",
+      "compo": "VITAMINÉ DÉTOX, CAESAR AU PARADIS, BURRATA D’ENFER, MAMA CHEF SALADE",
+      "qtite": 1,
+      "prix": "27.000",
+      "id": 4
+    }
+  ],
+  "user": [
+    {
+      "name": "amira",
+      "mail": "amira@co.co",
+      "pass": "123!123A",
+      "id": 1
+    },
+    {
+      "name": "salim",
+      "mail": "salim@gmail.co",
+      "pass": "1987!!2020",
+      "id": 2
+    },
+    {
+      "name": "seif",
+      "mail": "seif@co.co",
+      "pass": "seif123!",
+      "id": 3
+    },
+    {
+      "name": "achref",
+      "mail": "ach@co.co",
+      "pass": "2020!1985",
+      "id": 4
+    },
+    {
+      "name": "",
+      "mail": "",
+      "pass": "",
+      "id": 5
+    }
+  ]
+}
