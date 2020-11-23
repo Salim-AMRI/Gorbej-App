@@ -22,7 +22,6 @@ const SingIn = ({ addPerson }) => {
         </Link>
 
         <form>
-          
           <span>Nom d'utilisateur</span>
           <input
             type="text"
@@ -77,13 +76,11 @@ const SingIn = ({ addPerson }) => {
             onChange={(e) => setUserPass(e.target.value)}
           />
           <span>Je suis</span>
-          <input
-            type="text"
-            required
-            value={userRole}
-            onChange={(e) => setUserRole("Administrateur")}
-          />
-          <Link to="/carte"  className="margin">
+          <select onChange={(e) => setUserRole(e.target.value)}>
+            <option value="Client">Client</option>
+            <option value="Administrateur">Administrateur</option>
+          </select>
+          <Link to="/carte" className="margin">
             <button
               onClick={() =>
                 addPerson({
@@ -93,7 +90,7 @@ const SingIn = ({ addPerson }) => {
                   tel: userTel,
                   mail: userMail,
                   pass: userPass,
-                  role: userRole
+                  role: userRole,
                 })
               }
             >

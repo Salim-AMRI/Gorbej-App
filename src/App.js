@@ -24,18 +24,20 @@ function App() {
         <Route exact path="/client" component={Clients} />
 
         <Route exact path="/" component={Accueil} />
-        <Route exact path="/cnx" component={Connexion} />
-        
+        <Route exact path="/auto" component={Auto} />
+
         <Route exact path="/home" component={Carte} />
-        <Route exact path="/panier" component={Commande} />
+        {/* <Route exact path="/panier" component={Commande} /> */}
         <Route exact path="/signup" component={Deconnexion} />
 
-        <Route path="/auto">
-          <Auto />
-        </Route>
         <Route path="/cxn">
           <Connexion />
         </Route>
+
+        <Route path="/panier">
+          <Commande />
+        </Route>
+
         <Route path="/carte">
           <Carte />
         </Route>

@@ -1,39 +1,52 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { GetUsersFromApi } from "../Action/userActions";
-import Fade from "react-reveal/Fade";
-import Zoom from "react-reveal/Zoom";
-import Modal from "react-modal";
-//import { Link } from "react-router-dom";
+import { GetUsersFromApi, deleteUserFromApi } from "../Action/userActions";
+// import Fade from "react-reveal/Fade";
+// import Zoom from "react-reveal/Zoom";
+// import Modal from "react-modal";
+// import { Link } from "react-router-dom";
+import { Table, Thead, Tr, Th, Td, Tbody } from "react-super-responsive-table";
+import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
 
 class Dashboard extends Component {
-  state = {
-    el: null,
-  };
+  // state = {
+  //   el: null,
+  // };
 
   componentDidMount() {
     this.props.getAllUser();
   }
 
-  openModal = (el) => {
-    this.setState({ el });
-  };
+  // openModal = (el) => {
+  //   this.setState({ el });
+  // };
 
-  closeModal = () => {
-    this.setState({
-      el: null,
-    });
-  };
+  // closeModal = () => {
+  //   this.setState({
+  //     el: null,
+  //   });
+  // };
 
   render() {
-    const { el } = this.state;
+    
     const { user } = this.props;
+    console.log(user)
     const toutUsers = user.length ? (
       user.map((el) => {
         return (
-          <div className="carte" key={el.id}>
-            <h2 onClick={() => this.openModal(el)}>{el.name}</h2>
-          </div>
+
+            <Tr>
+              <Td className="table"> {el.name} </Td>
+              <Td className="table"> {el.adress} </Td>
+              <Td className="table"> {el.mail} </Td>
+              <Td className="table"> {el.tel} </Td>
+              <Td className="table"> <button onClick={() => {
+                  this.props.delete(el._id);
+                }}>Supprimer</button> </Td>
+            </Tr>
+
+
+          
         );
       })
     ) : (
@@ -42,14 +55,32 @@ class Dashboard extends Component {
     return (
       <div>
         <h1>TOUT LES CLIENTS</h1>
-        <Fade bottom cascade={true}>
+        <div className="T-T">
+          <Table className="table">
+            <Thead>
+              <Tr>
+                <Th className="table">Client</Th>
+                <Th className="table">Adress</Th>
+                <Th className="table">Mail</Th>
+                <Th className="table">Tel.</Th>
+                <Th className="table">Supprimer</Th>
+              </Tr>
+            </Thead>
+             
+            <Tbody>
+              {toutUsers}
+            </Tbody>
+             
+          </Table>
+        </div>
+        {/* <Fade bottom cascade={true}>
           <div className="top">{toutUsers}</div>
         </Fade>
-        {/* <div>
+        <div>
           <Link to="/enCours">
             <button>Commandes en cours</button>
           </Link>
-        </div> */}
+        </div>
         {el && (
           <Modal isOpen={true} onRequestClose={this.closeModal}>
             <button className="close-modal" onClick={this.closeModal}>
@@ -67,7 +98,7 @@ class Dashboard extends Component {
               </div>
             </Zoom>
           </Modal>
-        )}
+        )} */}
       </div>
     );
   }
@@ -81,6 +112,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => ({
   getAllUser: () => dispatch(GetUsersFromApi()),
+  delete: (_id) => dispatch(deleteUserFromApi(_id)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);

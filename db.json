@@ -58,12 +58,12 @@
   ],
   "user": [
     {
-      "name": "salim amri",
+      "name": "amri",
       "cin": "07895163",
       "adress": "Jendouba, Tunisie",
       "tel": "55240423",
       "mail": "amri@co.co",
-      "pass": "159753!!nn",
+      "pass": "07895163",
       "role": "Administrateur",
       "id": 1
     },

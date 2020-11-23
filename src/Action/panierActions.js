@@ -13,7 +13,7 @@ export const getAllPanier = (payload) => ({
 
 export function getPanierFromApi() {
   return (dispatch) =>
-    Axios.get("http://localhost:3000/panier").then((res) =>
+    Axios.get("http://localhost:8000/paniers/").then((res) =>
       dispatch(getAllPanier(res.data))
     );
 }
@@ -60,9 +60,9 @@ export const deletePanier = (payload) => ({
   payload,
 });
 
-export function deletePanierFromApi(id) {
+export function deletePanierFromApi(_id) {
   return (dispatch) =>
-    Axios.delete("http://localhost:3000/panier/" + id).then((res) =>
+    Axios.delete("http://localhost:8000/paniers/" + _id).then((res) =>
       dispatch(getPanierFromApi())
     );
 }

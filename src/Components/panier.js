@@ -23,20 +23,20 @@ class Order extends Component {
       this.props.panier.map((el) => {
         return (
           <Zoom>
-            <div className="carte" key={el.id}>
+            <div className="carte" key={el._id}>
               <span
                 title="Opps! Supprimer!"
                 style={{ fontSize: "x-large", cursor: "pointer" }}
                 role="img"
                 aria-label="Opps! Supprimer!"
                 onClick={() => {
-                  this.props.delete(el.id);
+                  this.props.delete(el._id);
                 }}
               >
                 🗑️
               </span>
               <h2>{el.titre}</h2>
-              <img className="menu" src={el.photo} alt="select food" />
+              <img className="menu" src={el.photo} alt={el.titre} />
               <p>Prix : {formatPrix(el.prix)} </p>
             </div>
           </Zoom>
@@ -70,7 +70,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => ({
   getAllPanier: () => dispatch(getPanierFromApi()),
-  delete: (id) => dispatch(deletePanierFromApi(id)),
+  delete: (_id) => dispatch(deletePanierFromApi(_id)),
   //updatePanier: (el) => dispatch(updatePanierFromAPI(el)),
 });
 

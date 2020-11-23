@@ -1,6 +1,10 @@
 import React from "react";
 
 function Logo() {
-  return <p className="Lo">Gorbej</p>;
+  return (
+    <a href="/" className="Lo">
+      Gorbej
+    </a>
+  );
 }
 export default Logo;

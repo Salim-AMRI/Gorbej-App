@@ -5,6 +5,7 @@ import {
   ADD_PRODUCT,
   EDIT_PRODUCT,
   DELETE_PRODUCT,
+  GET_PRODUCT_BY_ID
 } from "./types";
 
 /* get  product */
@@ -16,8 +17,23 @@ export const getAllProduct = (payload) => ({
 
 export function getProductFromApi() {
   return (dispatch) =>
-    Axios.get("http://localhost:3000/produits").then((res) =>
+    Axios.get("http://localhost:8000/produits/").then((res) =>
       dispatch(getAllProduct(res.data))
+    );
+}
+
+/* get  product by user */
+
+export const getProductUser = (payload) => ({
+  type: GET_PRODUCT_BY_ID,
+  payload: payload,
+});
+
+export function getProductByUserFromApi() {
+  let userId1 = localStorage.getItem("_id");
+  return (dispatch) =>
+    Axios.get("http://localhost:8000/produits/"+ userId1).then((res) =>
+      dispatch(getProductUser(res.data))
     );
 }
 
@@ -29,17 +45,21 @@ export const addProduct = (payload) => ({
 });
 
 export function postProduct(el) {
+  let userId1 = localStorage.getItem("_id");
   return (dispatch) =>
-    Axios.post(`http://localhost:3000/produits`, {
-      id: el.id,
+    Axios.post(`http://localhost:8000/produits/`, {
+      _id: el._id,
       titre: el.titre,
       type: el.type,
       etat: el.etat,
+      sex: el.sex,
+      disponibilité: el.disponibilité,
       photo: el.photo,
       description: el.description,
       prix: el.prix,
+      userId : userId1
     })
-      .then((res) => dispatch(addProduct(el)))
+      .then((res) => dispatch(addProduct({...el,userId : userId1})))
       .catch((err) => console.log(err));
 }
 
@@ -50,10 +70,10 @@ export const deleteProduct = (payload) => ({
   payload,
 });
 
-export function deleteProductFromApi(id) {
+export function deleteProductFromApi(_id) {
   return (dispatch) =>
-    Axios.delete("http://localhost:3000/products/" + id).then((res) =>
-      dispatch(deleteProduct(id))
+    Axios.delete("http://localhost:8000/produits/" + _id).then((res) =>
+      dispatch(getProductByUserFromApi())
     );
 }
 
@@ -67,8 +87,8 @@ export const editeProduct = (payload) => ({
 export function editeProductFromApi(el) {
   console.log(el);
   return (dispatch) =>
-    Axios.patch("http://localhost:3000/products/" + el.id, el).then(
-      (res) => dispatch(getProductFromApi()),
+    Axios.patch("http://localhost:8000/produits/" + el._id, el).then(
+      (res) => dispatch(getProductByUserFromApi()),
       console.log(el)
     );
 }
@@ -82,7 +102,7 @@ export const addToPanier = (payload) => ({
 
 export function selectProduct(el) {
   return (dispatch) =>
-    Axios.post(`http://localhost:3000/panier`, el)
+    Axios.post(`http://localhost:8000/paniers/`, el)
       .then((res) => dispatch(addToPanier(el)))
       .catch((err) => console.log(err));
 }

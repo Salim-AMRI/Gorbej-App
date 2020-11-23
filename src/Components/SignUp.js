@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { GetUsersFromApi } from "../Action/userActions";
+import { GetUsersFromApi, connectUserFromApi } from "../Action/userActions";
 
 class SignUp extends Component {
   verif() {
-    console.log(this.state);
+    /*console.log(this.state);
     const x = this.props.user.filter(
       (el) => el.cin === this.state.cin && el.pass === this.state.pass
     );
@@ -15,6 +15,8 @@ class SignUp extends Component {
     } else {
       window.location.pathname = "/home";
     }
+    */
+    this.props.connectUserFromApi(this.state.cin, this.state.pass);
   }
   componentDidMount() {
     this.props.getAlluser();
@@ -57,6 +59,7 @@ const mapStateToProps = (state) => ({
 });
 const mapDispatchToProps = (dispatch) => ({
   getAlluser: () => dispatch(GetUsersFromApi()),
+  connectUserFromApi: (cin, pass) => dispatch(connectUserFromApi(cin, pass)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
